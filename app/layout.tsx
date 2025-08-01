@@ -4,6 +4,7 @@ import { GeistSans } from "geist/font/sans"
 import { GeistMono } from "geist/font/mono"
 import "./globals.css"
 import { Toaster } from "@/components/ui/toaster"
+import { ToastProvider } from "@/components/ui/toast"
 
 export const metadata: Metadata = {
   title: "451.WTF - Exposing Online Predators & Scammers",
@@ -85,8 +86,10 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${GeistSans.variable} ${GeistMono.variable}`}>
       <body className={GeistSans.className}>
-        {children}
-        <Toaster />
+        <ToastProvider>
+          {children}
+          <Toaster />
+        </ToastProvider>
       </body>
     </html>
   )
