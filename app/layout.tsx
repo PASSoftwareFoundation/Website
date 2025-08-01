@@ -1,48 +1,62 @@
-import type { Metadata } from 'next'
-import { GeistSans } from 'geist/font/sans'
-import { GeistMono } from 'geist/font/mono'
-import './globals.css'
+import type React from "react"
+import type { Metadata } from "next"
+import { GeistSans } from "geist/font/sans"
+import { GeistMono } from "geist/font/mono"
+import "./globals.css"
+import { Toaster } from "@/components/ui/toaster"
 
 export const metadata: Metadata = {
-  title: '451.WTF - Exposing Online Predators & Scammers',
-  description: 'We investigate and gather comprehensive information about online predators, scammers, and cyberbullies. Our evidence packages are then provided to law enforcement for proper legal action.',
-  keywords: ['internet safety', 'online predators', 'scammers', 'cyberbullying', 'digital investigation', 'law enforcement', 'evidence gathering', 'community safety'],
-  authors: [{ name: '451.WTF' }],
-  creator: '451.WTF',
-  publisher: '451.WTF',
-  generator: 'Next.js',
-  applicationName: '451.WTF',
-  referrer: 'origin-when-cross-origin',
+  title: "451.WTF - Exposing Online Predators & Scammers",
+  description:
+    "We investigate and gather comprehensive information about online predators, scammers, and cyberbullies. Our evidence packages are then provided to law enforcement for proper legal action.",
+  keywords: [
+    "internet safety",
+    "online predators",
+    "scammers",
+    "cyberbullying",
+    "digital investigation",
+    "law enforcement",
+    "evidence gathering",
+    "community safety",
+  ],
+  authors: [{ name: "451.WTF" }],
+  creator: "451.WTF",
+  publisher: "451.WTF",
+  generator: "Next.js",
+  applicationName: "451.WTF",
+  referrer: "origin-when-cross-origin",
   formatDetection: {
     email: false,
     address: false,
     telephone: false,
   },
-  metadataBase: new URL('https://451.wtf'),
+  metadataBase: new URL("https://451.wtf"),
   alternates: {
-    canonical: '/',
+    canonical: "/",
   },
   openGraph: {
-    title: '451.WTF - Exposing Online Predators & Scammers',
-    description: 'We investigate and gather comprehensive information about online predators, scammers, and cyberbullies. Our evidence packages are then provided to law enforcement for proper legal action.',
-    url: 'https://451.wtf',
-    siteName: '451.WTF',
-    locale: 'en_US',
-    type: 'website',
+    title: "451.WTF - Exposing Online Predators & Scammers",
+    description:
+      "We investigate and gather comprehensive information about online predators, scammers, and cyberbullies. Our evidence packages are then provided to law enforcement for proper legal action.",
+    url: "https://451.wtf",
+    siteName: "451.WTF",
+    locale: "en_US",
+    type: "website",
     images: [
       {
-        url: '/favicons/dark.png',
+        url: "/favicons/dark.png",
         width: 512,
         height: 512,
-        alt: '451.WTF Logo',
+        alt: "451.WTF Logo",
       },
     ],
   },
   twitter: {
-    card: 'summary_large_image',
-    title: '451.WTF - Exposing Online Predators & Scammers',
-    description: 'We investigate and gather comprehensive information about online predators, scammers, and cyberbullies. Our evidence packages are then provided to law enforcement for proper legal action.',
-    images: ['/favicons/dark.png'],
+    card: "summary_large_image",
+    title: "451.WTF - Exposing Online Predators & Scammers",
+    description:
+      "We investigate and gather comprehensive information about online predators, scammers, and cyberbullies. Our evidence packages are then provided to law enforcement for proper legal action.",
+    images: ["/favicons/dark.png"],
   },
   robots: {
     index: true,
@@ -50,17 +64,17 @@ export const metadata: Metadata = {
     googleBot: {
       index: true,
       follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
     },
   },
   icons: {
-    icon: '/favicons/dark.png',
-    shortcut: '/favicons/dark.png',
-    apple: '/favicons/dark.png',
+    icon: "/favicons/dark.png",
+    shortcut: "/favicons/dark.png",
+    apple: "/favicons/dark.png",
   },
-  manifest: '/manifest.json',
+  manifest: "/manifest.json",
 }
 
 export default function RootLayout({
@@ -72,6 +86,7 @@ export default function RootLayout({
     <html lang="en" className={`${GeistSans.variable} ${GeistMono.variable}`}>
       <body className={GeistSans.className}>
         {children}
+        <Toaster />
       </body>
     </html>
   )
