@@ -530,7 +530,7 @@ export default function ReportSection() {
       toast({
         title: "Validation Error",
         description: "Please fix the errors in your reports before submitting.",
-        variant: "error",
+        variant: "destructive",
       })
       return
     }
@@ -633,7 +633,6 @@ export default function ReportSection() {
       toast({
         title: "Reports Submitted Successfully!",
         description: `${formattedReports.length} report(s) submitted.`,
-        variant: "success",
       })
   
       setReports([])
@@ -643,7 +642,7 @@ export default function ReportSection() {
       toast({
         title: "Submission Failed",
         description: "There was an error submitting your reports. Please try again.",
-        variant: "error",
+        variant: "destructive",
       })
     } finally {
       setIsSubmitting(false)
@@ -663,7 +662,7 @@ export default function ReportSection() {
 
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-            <Button size="lg" onClick={addReport} className="bg-primary hover:bg-primary/90 text-text px-8 py-3">
+            <Button size="lg" onClick={addReport} className="bg-primary hover:bg-primary/90 text-background px-8 py-3">
               <Plus className="w-5 h-5 mr-2" />
               Add Report
             </Button>
@@ -673,7 +672,7 @@ export default function ReportSection() {
                 size="lg"
                 onClick={handleSubmit}
                 disabled={isSubmitting}
-                className="bg-accent hover:bg-accent/90 text-text px-8 py-3 disabled:opacity-50 disabled:cursor-not-allowed"
+                className="bg-accent hover:bg-accent/90 text-background px-8 py-3 disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 <Send className="w-5 h-5 mr-2" />
                 {isSubmitting ? "Submitting..." : `Submit All Reports (${reports.length})`}

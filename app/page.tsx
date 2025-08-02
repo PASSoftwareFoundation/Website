@@ -17,7 +17,7 @@ import {
 } from "lucide-react"
 import Link from "next/link"
 import ReportSection from "@/components/report-form"
-import { UseToastProvider } from "@/hooks/use-toast"
+
 
 const scrollToReports = () => {
   const element = document.getElementById("report")
@@ -28,8 +28,7 @@ const scrollToReports = () => {
 
 export default function HomePage() {
   return (
-    <UseToastProvider>
-      <div className="min-h-screen bg-background text-text">
+    <div className="min-h-screen bg-background text-text">
         {/* Header */}
         <header className="border-b border-secondary/50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
           <div className="container mx-auto px-4 lg:px-6 h-16 flex items-center justify-between">
@@ -91,18 +90,10 @@ export default function HomePage() {
               <Button
                 size="lg"
                 onClick={scrollToReports}
-                className="bg-primary hover:bg-primary/90 text-text px-8 py-3 cursor-pointer"
+                className="bg-primary hover:bg-primary/90 text-background px-8 py-3 cursor-pointer"
               >
                 <AlertTriangle className="w-5 h-5 mr-2" />
                 Report a Threat
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-primary text-primary hover:bg-primary hover:text-background px-8 py-3 bg-transparent"
-              >
-                <Users className="w-5 h-5 mr-2" />
-                Join Community
               </Button>
             </div>
           </div>
@@ -375,6 +366,5 @@ export default function HomePage() {
           </div>
         </footer>
       </div>
-    </UseToastProvider>
   )
 }
