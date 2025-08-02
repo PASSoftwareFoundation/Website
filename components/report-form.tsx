@@ -549,23 +549,69 @@ export default function ReportSection() {
         const file = original.proof instanceof File ? original.proof : null
         const isImage = file && file.type.startsWith("image/")
   
+        // Extract key information from report details
+        const platformConfig = platformSchemas[original.platform as keyof typeof platformSchemas]
+        const usernames = report.details[platformConfig?.fields.find(f => f.key === "usernames")?.label || "Usernames"] || []
+        const reason = report.details["Reason for Report"] || "No reason provided"
+        const targetNames = Array.isArray(usernames) && usernames.length > 0 ? usernames.join(", ") : "Unknown User"
+        const primaryTarget = Array.isArray(usernames) && usernames.length > 0 ? usernames[0] : "Unknown User"
+        
+        // Build fields dynamically based on platform
+        const fields = [
+          {
+            name: "🕵️‍♂️ Reporter",
+            value: "Anonymous Reporter",
+            inline: true
+          },
+          {
+            name: "🎯 Target",
+            value: targetNames,
+            inline: true
+          },
+          {
+            name: "📱 Platform",
+            value: platformConfig?.label || "Unknown",
+            inline: true
+          }
+        ]
+        
+        // Add platform-specific fields
+        if (platformConfig) {
+          platformConfig.fields.forEach(field => {
+            if (field.key !== "usernames" && field.key !== "reason" && field.key !== "proof") {
+              const value = report.details[field.label]
+              if (value && (Array.isArray(value) ? value.length > 0 : value.trim() !== "")) {
+                fields.push({
+                  name: `📋 ${field.label}`,
+                  value: Array.isArray(value) ? value.join(", ") : value,
+                  inline: field.key.includes("Links") || field.key.includes("Urls") || field.key.includes("IPs")
+                })
+              }
+            }
+          })
+        }
+        
+        // Add reason field
+        fields.push({
+          name: "📄 Reason",
+          value: reason,
+          inline: false
+        })
+        
         const embed = {
-          title: `${report.platform} Report`,
-          description: Object.entries(report.details)
-            .filter(([key]) => key !== "Upload Proof")
-            .map(([key, value]) =>
-              Array.isArray(value)
-                ? `**${key}:** ${value.join(", ")}`
-                : typeof value === "object"
-                ? `**${key}:** ${Object.entries(value || {})
-                    .map(([k, v]) => `${k}: ${v}`)
-                    .join(", ")}`
-                : `**${key}:** ${value}`
-            )
-            .join("\n"),
+          title: `🚨 New Report: ${primaryTarget}`,
+          color: 0xFF5555,
+          description: "A user has been reported. Details below:",
+          fields,
           timestamp: report.submissionTime,
-          footer: { text: `Report ID: ${report.reportId}` },
-          ...(isImage ? { image: { url: `attachment://${file.name}` } } : {}),
+          footer: {
+            text: `🆔 Report ID: ${report.reportId}`
+          },
+          author: {
+            name: `Anonymous Reporter reported ${primaryTarget}`,
+            icon_url: null
+          },
+          ...(isImage ? { image: { url: `attachment://${file.name}` } } : {})
         }
   
         formData.append("payload_json", JSON.stringify({ embeds: [embed] }))
