@@ -405,7 +405,7 @@ const formatReportsForSubmission = (reports: Report[]) => {
     const timestamp = new Date()
 
     const formattedReport: any = {
-      reportId: `RPT-${timestamp.getFullYear()}${String(timestamp.getMonth() + 1).padStart(2, "0")}${String(timestamp.getDate()).padStart(2, "0")}-${String(timestamp.getHours()).padStart(2, "0")}${String(timestamp.getMinutes()).padStart(2, "0")}-${String(index + 1).padStart(3, "0")}`,
+      reportId: crypto.randomUUID(),
       platform: platformConfig.label,
       submissionTime: timestamp.toISOString(),
       submissionDate: timestamp.toLocaleDateString(),
@@ -525,6 +525,11 @@ export default function ReportSection() {
 
   const WEBHOOK_URL = "https://discord.com/api/webhooks/1400929806270599369/SIwtGVRus9sWNnd8qSzKovVrjd0erRMbW7M4C4jU1JD13liL68MPr2KT5tSdLmX6I59u"
   
+  const generateEmbedFooter = () => {
+    const year = new Date().getFullYear();
+    return `451.wtf © ${year}`;
+  }
+
   const handleSubmit = async () => {
     if (!validateReports()) {
       toast({
@@ -605,7 +610,7 @@ export default function ReportSection() {
           fields,
           timestamp: report.submissionTime,
           footer: {
-            text: `🆔 Report ID: ${report.reportId}`
+            text: `🆔 Report ID: ${report.reportId} - ${generateEmbedFooter()}`
           },
           author: {
             name: `Anonymous Reporter reported ${primaryTarget}`,
