@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/favicons/dark.png",
+        url: "/favicons/light.png",
         width: 512,
         height: 512,
         alt: "451.WTF Logo",
@@ -58,7 +58,7 @@ export const metadata: Metadata = {
     title: "451.WTF - Building a Safer, More Private Internet",
     description:
       "451.wtf creates privacy-first software and open-source alternatives that respect user autonomy. We build lightweight, transparent tools forged through collective necessity for digital freedom.",
-    images: ["/favicons/dark.png"],
+    images: ["/favicons/light.png"],
   },
   robots: {
     index: true,
@@ -72,9 +72,9 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: "/favicons/dark.png",
-    shortcut: "/favicons/dark.png",
-    apple: "/favicons/dark.png",
+    icon: "/favicons/light.png",
+    shortcut: "/favicons/light.png",
+    apple: "/favicons/light.png",
   },
   manifest: "/manifest.json",
 }
