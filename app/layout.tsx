@@ -6,20 +6,22 @@ import "./globals.css"
 import { Toaster } from "@/components/ui/toaster"
 
 export const metadata: Metadata = {
-  title: "451.WTF - Exposing Online Predators & Scammers",
+  title: "451.WTF - Building a Safer, More Private Internet",
   description:
-    "We investigate and gather comprehensive information about online predators, scammers, and cyberbullies. Our evidence packages are then provided to law enforcement for proper legal action.",
+    "451.wtf creates privacy-first software and open-source alternatives that respect user autonomy. We build lightweight, transparent tools forged through collective necessity for digital freedom.",
   keywords: [
+    "privacy",
+    "open source",
+    "digital freedom",
+    "anti-surveillance",
+    "GPL-3.0",
+    "community-driven",
+    "censorship-resistant",
     "internet safety",
-    "online predators",
-    "scammers",
-    "cyberbullying",
-    "digital investigation",
-    "law enforcement",
-    "evidence gathering",
-    "community safety",
+    "privacy-first software",
+    "digital autonomy",
   ],
-  authors: [{ name: "451.WTF" }],
+  authors: [{ name: "451.WTF Collective" }],
   creator: "451.WTF",
   publisher: "451.WTF",
   generator: "Next.js",
@@ -35,9 +37,9 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   openGraph: {
-    title: "451.WTF - Exposing Online Predators & Scammers",
+    title: "451.WTF - Building a Safer, More Private Internet",
     description:
-      "We investigate and gather comprehensive information about online predators, scammers, and cyberbullies. Our evidence packages are then provided to law enforcement for proper legal action.",
+      "451.wtf creates privacy-first software and open-source alternatives that respect user autonomy. We build lightweight, transparent tools forged through collective necessity for digital freedom.",
     url: "https://451.wtf",
     siteName: "451.WTF",
     locale: "en_US",
@@ -53,9 +55,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "451.WTF - Exposing Online Predators & Scammers",
+    title: "451.WTF - Building a Safer, More Private Internet",
     description:
-      "We investigate and gather comprehensive information about online predators, scammers, and cyberbullies. Our evidence packages are then provided to law enforcement for proper legal action.",
+      "451.wtf creates privacy-first software and open-source alternatives that respect user autonomy. We build lightweight, transparent tools forged through collective necessity for digital freedom.",
     images: ["/favicons/dark.png"],
   },
   robots: {
