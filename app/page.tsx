@@ -46,9 +46,6 @@ export default function HomePage() {
             <Link href="#projects" className="text-sm font-medium hover:text-primary transition-colors">
               Projects
             </Link>
-            <Link href="#contribute" className="text-sm font-medium hover:text-primary transition-colors">
-              Contribute
-            </Link>
           </nav>
           <Button
             variant="outline"
