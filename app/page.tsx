@@ -7,7 +7,6 @@ import {
   Users,
   Code,
   FileText,
-  ExternalLink,
   MessageCircle,
   Book,
   Scale,
@@ -34,7 +33,7 @@ export default function HomePage() {
       <header className="border-b border-secondary/50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container mx-auto px-4 lg:px-6 h-16 flex items-center justify-between">
           <Link href="/" className="text-xl font-bold">
-            451.WTF
+            451.wtf
           </Link>
           <nav className="hidden md:flex items-center space-x-6">
             <Link href="#mission" className="text-sm font-medium hover:text-primary transition-colors">
@@ -47,14 +46,6 @@ export default function HomePage() {
               Projects
             </Link>
           </nav>
-          <Button
-            variant="outline"
-            size="sm"
-            onClick={scrollToContribute}
-            className="border-primary text-primary hover:bg-primary hover:text-background bg-transparent cursor-pointer"
-          >
-            Join Us
-          </Button>
         </div>
       </header>
 
@@ -76,8 +67,8 @@ export default function HomePage() {
           </h1>
 
           <p className="text-xl md:text-2xl text-text/80 mb-8 max-w-4xl mx-auto leading-relaxed">
-            451.wtf creates privacy-first software and open-source alternatives that respect user autonomy. We build
-            lightweight, transparent tools forged through collective necessity.
+            We create privacy-first software and open-source alternatives that respect user autonomy. We build
+            lightweight, transparent tools forged through team collaboration and shared necessity.
           </p>
 
           <p className="text-lg text-primary/80 mb-12 font-medium">Privacy isn't a feature – it's the foundation.</p>
@@ -243,11 +234,11 @@ export default function HomePage() {
                   telemetry, no backdoors, just pure digital sovereignty.
                 </p>
                 <div className="flex items-center gap-4 text-sm text-primary/70">
-                  <span className="flex items-center gap-1">
+                  <span className="flex items-center gap-1 text-gray-400">
                     <Scale className="w-3 h-3" />
                     GPL v3.0
                   </span>
-                  <span className="flex items-center gap-1">
+                  <span className="flex items-center gap-1 text-gray-400">
                     <Code className="w-3 h-3" />
                     OS & Kernel
                   </span>
@@ -284,10 +275,10 @@ export default function HomePage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-8">
             {/* Brand Section */}
             <div className="lg:col-span-2">
-              <h3 className="text-2xl font-bold mb-4 text-primary">451.WTF</h3>
+              <h3 className="text-2xl font-bold mb-4 text-primary">451.wtf</h3>
               <p className="text-text/70 text-sm mb-6 leading-relaxed">
                 Building privacy-first software and open-source alternatives that respect user autonomy. We create
-                lightweight, transparent tools forged through collective necessity for a safer internet.
+                lightweight, transparent tools forged through team collaboration for a safer internet.
               </p>
               <div className="flex space-x-4">
                 <Button
@@ -420,8 +411,8 @@ export default function HomePage() {
           <div className="border-t mt-12 pt-8 border-border">
             <div className="flex flex-col md:flex-row justify-between items-center">
               <p className="text-sm text-text/60 mb-4 md:mb-0">
-                451.WTF &copy; {new Date().getFullYear()} - Forging censorship-resistant software for a constrained digital
-                world.
+                451.wtf &copy; {new Date().getFullYear()} - Team-driven development of censorship-resistant software for
+                a constrained digital world.
               </p>
               <div className="flex items-center space-x-6 text-xs text-text/50">
                 <span>Privacy isn't a feature – it's the foundation</span>

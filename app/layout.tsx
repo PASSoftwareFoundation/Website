@@ -6,7 +6,7 @@ import "./globals.css"
 import { Toaster } from "@/components/ui/toaster"
 
 export const metadata: Metadata = {
-  title: "451.WTF - Building a Safer, More Private Internet",
+  title: "451.wtf - Building a Safer, More Private Internet",
   description:
     "451.wtf creates privacy-first software and open-source alternatives that respect user autonomy. We build lightweight, transparent tools forged through collective necessity for digital freedom.",
   keywords: [
@@ -21,11 +21,11 @@ export const metadata: Metadata = {
     "privacy-first software",
     "digital autonomy",
   ],
-  authors: [{ name: "451.WTF Collective" }],
-  creator: "451.WTF",
-  publisher: "451.WTF",
+  authors: [{ name: "451.wtf Team" }],
+  creator: "451.wtf Team",
+  publisher: "451.wtf",
   generator: "Next.js",
-  applicationName: "451.WTF",
+  applicationName: "451.wtf",
   referrer: "origin-when-cross-origin",
   formatDetection: {
     email: false,
@@ -37,11 +37,11 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   openGraph: {
-    title: "451.WTF - Building a Safer, More Private Internet",
+    title: "451.wtf - Building a Safer, More Private Internet",
     description:
       "451.wtf creates privacy-first software and open-source alternatives that respect user autonomy. We build lightweight, transparent tools forged through collective necessity for digital freedom.",
     url: "https://451.wtf",
-    siteName: "451.WTF",
+    siteName: "451.wtf",
     locale: "en_US",
     type: "website",
     images: [
@@ -49,13 +49,13 @@ export const metadata: Metadata = {
         url: "/favicons/light.png",
         width: 512,
         height: 512,
-        alt: "451.WTF Logo",
+        alt: "451.wtf Logo",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "451.WTF - Building a Safer, More Private Internet",
+    title: "451.wtf - Building a Safer, More Private Internet",
     description:
       "451.wtf creates privacy-first software and open-source alternatives that respect user autonomy. We build lightweight, transparent tools forged through collective necessity for digital freedom.",
     images: ["/favicons/light.png"],
