@@ -226,7 +226,7 @@ export default function HomePage() {
                     </Button>
                   </div>
                 </div>
-                <CardDescription className="text-primary/80">Privacy-focused Operating System</CardDescription>
+                <CardDescription className="text-gray-400">Privacy-focused Operating System</CardDescription>
               </CardHeader>
               <CardContent>
                 <p className="text-primary mb-4">
