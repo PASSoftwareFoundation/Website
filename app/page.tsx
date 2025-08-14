@@ -249,7 +249,7 @@ export default function HomePage() {
             <Card className="bg-secondary/60 border-secondary/50 hover:border-primary/50 transition-colors shadow-lg">
               <CardHeader>
                 <CardTitle className="text-primary text-2xl">More Coming Soon</CardTitle>
-                <CardDescription className="text-primary/80">Privacy-first tools in development</CardDescription>
+                <CardDescription className="text-gray-400">Privacy-first tools in development</CardDescription>
               </CardHeader>
               <CardContent>
                 <p className="text-primary mb-4">
