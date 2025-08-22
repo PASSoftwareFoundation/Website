@@ -207,11 +207,11 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-8">
             <Card className="bg-secondary/60 border-secondary/50 hover:border-primary/50 transition-colors shadow-lg">
               <CardHeader>
                 <div className="flex items-center justify-between">
-                  <CardTitle className="text-primary text-2xl">CloakOS</CardTitle>
+                  <CardTitle className="text-primary text-2xl">Cloak</CardTitle>
                   <div className="flex gap-2">
                     <Button
                       variant="outline"
@@ -219,7 +219,7 @@ export default function HomePage() {
                       asChild
                       className="border-primary/50 text-primary hover:bg-primary/10 bg-transparent"
                     >
-                      <Link href="https://codeberg.org/451/CloakOS" target="_blank" rel="noopener noreferrer">
+                      <Link href="https://codeberg.org/451/Cloak" target="_blank" rel="noopener noreferrer">
                         <Github className="w-4 h-4 mr-1" />
                         Code
                       </Link>
@@ -240,7 +240,7 @@ export default function HomePage() {
                   </span>
                   <span className="flex items-center gap-1 text-gray-400">
                     <Code className="w-3 h-3" />
-                    OS & Kernel
+                    Operating System
                   </span>
                 </div>
               </CardContent>
@@ -248,21 +248,39 @@ export default function HomePage() {
 
             <Card className="bg-secondary/60 border-secondary/50 hover:border-primary/50 transition-colors shadow-lg">
               <CardHeader>
-                <CardTitle className="text-primary text-2xl">More Coming Soon</CardTitle>
-                <CardDescription className="text-gray-400">Privacy-first tools in development</CardDescription>
+                <div className="flex items-center justify-between">
+                  <CardTitle className="text-primary text-2xl">Silhouette</CardTitle>
+                  <div className="flex gap-2">
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      asChild
+                      className="border-primary/50 text-primary hover:bg-primary/10 bg-transparent"
+                    >
+                      <Link href="https://codeberg.org/451/Silhouette" target="_blank" rel="noopener noreferrer">
+                        <Github className="w-4 h-4 mr-1" />
+                        Code
+                      </Link>
+                    </Button>
+                  </div>
+                </div>
+                <CardDescription className="text-gray-400">Privacy-focused Kernel</CardDescription>
               </CardHeader>
               <CardContent>
                 <p className="text-primary mb-4">
-                  We're actively developing more privacy-focused tools and applications. Join our community to stay
-                  updated and contribute to upcoming projects.
+                  The secure kernel powering Cloak OS. Built with privacy and security at its core, providing the
+                  foundation for a truly private computing experience.
                 </p>
-                <Button
-                  onClick={scrollToContribute}
-                  className="bg-primary hover:bg-primary/90 text-background cursor-pointer"
-                >
-                  <Users className="w-4 h-4 mr-2" />
-                  Join Development
-                </Button>
+                <div className="flex items-center gap-4 text-sm text-primary/70">
+                  <span className="flex items-center gap-1 text-gray-400">
+                    <Scale className="w-3 h-3" />
+                    GPL v3.0
+                  </span>
+                  <span className="flex items-center gap-1 text-gray-400">
+                    <Code className="w-3 h-3" />
+                    Kernel
+                  </span>
+                </div>
               </CardContent>
             </Card>
           </div>
