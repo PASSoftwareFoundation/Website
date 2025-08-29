@@ -33,7 +33,7 @@ export default function HomePage() {
       <header className="border-b border-secondary/50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container mx-auto px-4 lg:px-6 h-16 flex items-center justify-between">
           <Link href="/" className="text-xl font-bold">
-            451.wtf
+            PAS Software Foundation
           </Link>
           <nav className="hidden md:flex items-center space-x-6">
             <Link href="#mission" className="text-sm font-medium hover:text-primary transition-colors">
@@ -88,7 +88,7 @@ export default function HomePage() {
               asChild
               className="border-primary text-primary hover:bg-primary/10 bg-transparent px-8 py-3"
             >
-              <Link href="https://codeberg.org/451" target="_blank" rel="noopener noreferrer">
+              <Link href="https://github.com/PASSoftwareFoundation" target="_blank" rel="noopener noreferrer">
                 <Github className="w-5 h-5 mr-2" />
                 View Projects
               </Link>
@@ -207,7 +207,43 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-8"> <Card className="bg-secondary/60 border-secondary/50 hover:border-primary/50 transition-colors shadow-lg">
+              <CardHeader>
+                <div className="flex items-center justify-between">
+                  <CardTitle className="text-primary text-2xl">Ra</CardTitle>
+                  <div className="flex gap-2">
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      asChild
+                      className="border-primary/50 text-primary hover:bg-primary/10 bg-transparent"
+                    >
+                      <Link href="https://github.com/PASSoftwareFoundation/Ra" target="_blank" rel="noopener noreferrer">
+                        <Github className="w-4 h-4 mr-1" />
+                        Code
+                      </Link>
+                    </Button>
+                  </div>
+                </div>
+                <CardDescription className="text-gray-400">Low-Level Programming Language with High-Level Syntax</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <p className="text-primary mb-4">
+                  An programming language focused on usability, developer experience and write less do more. We have planned this language for more than 4 Months to make it as polished as possible.
+                </p>
+                <div className="flex items-center gap-4 text-sm text-primary/70">
+                  <span className="flex items-center gap-1 text-gray-400">
+                    <Scale className="w-3 h-3" />
+                    GPL v3.0
+                  </span>
+                  <span className="flex items-center gap-1 text-gray-400">
+                    <Code className="w-3 h-3" />
+                    Programming Language
+                  </span>
+                </div>
+              </CardContent>
+            </Card>
+
             <Card className="bg-secondary/60 border-secondary/50 hover:border-primary/50 transition-colors shadow-lg">
               <CardHeader>
                 <div className="flex items-center justify-between">
@@ -219,7 +255,7 @@ export default function HomePage() {
                       asChild
                       className="border-primary/50 text-primary hover:bg-primary/10 bg-transparent"
                     >
-                      <Link href="https://codeberg.org/451/Cloak" target="_blank" rel="noopener noreferrer">
+                      <Link href="https://github.com/PASSoftwareFoundation/Cloak" target="_blank" rel="noopener noreferrer">
                         <Github className="w-4 h-4 mr-1" />
                         Code
                       </Link>
@@ -257,7 +293,7 @@ export default function HomePage() {
                       asChild
                       className="border-primary/50 text-primary hover:bg-primary/10 bg-transparent"
                     >
-                      <Link href="https://codeberg.org/451/Silhouette" target="_blank" rel="noopener noreferrer">
+                      <Link href="https://github.com/PASSoftwareFoundation/Silhouette" target="_blank" rel="noopener noreferrer">
                         <Github className="w-4 h-4 mr-1" />
                         Code
                       </Link>
@@ -293,7 +329,7 @@ export default function HomePage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-8">
             {/* Brand Section */}
             <div className="lg:col-span-2">
-              <h3 className="text-2xl font-bold mb-4 text-primary">451.wtf</h3>
+              <h3 className="text-2xl font-bold mb-4 text-primary">PAS Software Foundation</h3>
               <p className="text-text/70 text-sm mb-6 leading-relaxed">
                 Building privacy-first software and open-source alternatives that respect user autonomy. We create
                 lightweight, transparent tools forged through team collaboration for a safer internet.
@@ -316,7 +352,7 @@ export default function HomePage() {
                   asChild
                   className="border-primary/30 text-primary hover:bg-primary/10 bg-transparent"
                 >
-                  <Link href="https://codeberg.org/451" target="_blank" rel="noopener noreferrer">
+                  <Link href="https://github.com/PASSoftwareFoundation" target="_blank" rel="noopener noreferrer">
                     <Github className="w-4 h-4 mr-2" />
                     Codeberg
                   </Link>
@@ -367,7 +403,7 @@ export default function HomePage() {
                 </li>
                 <li>
                   <Link
-                    href="https://codeberg.org/451"
+                    href="https://github.com/PASSoftwareFoundation"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-text/70 hover:text-primary transition-colors flex items-center"
@@ -429,7 +465,7 @@ export default function HomePage() {
           <div className="border-t mt-12 pt-8 border-border">
             <div className="flex flex-col md:flex-row justify-between items-center">
               <p className="text-sm text-text/60 mb-4 md:mb-0">
-                451.wtf &copy; {new Date().getFullYear()} - Team-driven development of censorship-resistant software for
+                PAS Software Foundation &copy; {new Date().getFullYear()} - Team-driven development of censorship-resistant software for
                 a constrained digital world.
               </p>
               <div className="flex items-center space-x-6 text-xs text-text/50">

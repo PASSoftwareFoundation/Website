@@ -6,9 +6,9 @@ import "./globals.css"
 import { Toaster } from "@/components/ui/toaster"
 
 export const metadata: Metadata = {
-  title: "451.wtf - Building a Safer, More Private Internet",
+  title: "PAS Software Foundation - Building a Safer, More Private Internet",
   description:
-    "451.wtf creates privacy-first software and open-source alternatives that respect user autonomy. We build lightweight, transparent tools forged through collective necessity for digital freedom.",
+    "PAS Software Foundation creates privacy-first software and open-source alternatives that respect user autonomy. We build lightweight, transparent tools forged through collective necessity for digital freedom.",
   keywords: [
     "privacy",
     "open source",
@@ -21,27 +21,27 @@ export const metadata: Metadata = {
     "privacy-first software",
     "digital autonomy",
   ],
-  authors: [{ name: "451.wtf Team" }],
-  creator: "451.wtf Team",
-  publisher: "451.wtf",
+  authors: [{ name: "PAS Software Foundation Team" }],
+  creator: "PAS Software Foundation Team",
+  publisher: "PAS Software Foundation",
   generator: "Next.js",
-  applicationName: "451.wtf",
+  applicationName: "PAS Software Foundation",
   referrer: "origin-when-cross-origin",
   formatDetection: {
     email: false,
     address: false,
     telephone: false,
   },
-  metadataBase: new URL("https://451.wtf"),
+  metadataBase: new URL("https://pass.foundation"),
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: "451.wtf - Building a Safer, More Private Internet",
+    title: "PAS Software Foundation - Building a Safer, More Private Internet",
     description:
-      "451.wtf creates privacy-first software and open-source alternatives that respect user autonomy. We build lightweight, transparent tools forged through collective necessity for digital freedom.",
-    url: "https://451.wtf",
-    siteName: "451.wtf",
+      "PAS Software Foundation creates privacy-first software and open-source alternatives that respect user autonomy. We build lightweight, transparent tools forged through collective necessity for digital freedom.",
+    url: "https://pass.foundation",
+    siteName: "PAS Software Foundation",
     locale: "en_US",
     type: "website",
     images: [
@@ -49,15 +49,15 @@ export const metadata: Metadata = {
         url: "/favicons/light.png",
         width: 512,
         height: 512,
-        alt: "451.wtf Logo",
+        alt: "PAS Software Foundation Logo",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "451.wtf - Building a Safer, More Private Internet",
+    title: "PAS Software Foundation - Building a Safer, More Private Internet",
     description:
-      "451.wtf creates privacy-first software and open-source alternatives that respect user autonomy. We build lightweight, transparent tools forged through collective necessity for digital freedom.",
+      "PAS Software Foundation creates privacy-first software and open-source alternatives that respect user autonomy. We build lightweight, transparent tools forged through collective necessity for digital freedom.",
     images: ["/favicons/light.png"],
   },
   robots: {
