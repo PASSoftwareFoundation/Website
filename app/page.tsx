@@ -354,7 +354,7 @@ export default function HomePage() {
                 >
                   <Link href="https://github.com/Reprivatize" target="_blank" rel="noopener noreferrer">
                     <Github className="w-4 h-4 mr-2" />
-                    Codeberg
+                    GitHub
                   </Link>
                 </Button>
               </div>

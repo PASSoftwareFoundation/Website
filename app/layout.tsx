@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL("https://reprivatize.com"),
+  metadataBase: new URL("https://reprivatize.me"),
   alternates: {
     canonical: "/",
   },
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     title: "Reprivatize - Building a Safer, More Private Internet",
     description:
       "Reprivatize creates privacy-first software and open-source alternatives that respect user autonomy. We build lightweight, transparent tools forged through collective necessity for digital freedom.",
-    url: "https://reprivatize.com",
+    url: "https://reprivatize.me",
     siteName: "Reprivatize",
     locale: "en_US",
     type: "website",
