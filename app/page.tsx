@@ -341,7 +341,7 @@ export default function HomePage() {
                   asChild
                   className="border-primary/30 text-primary hover:bg-primary/10 bg-transparent"
                 >
-                  <Link href="https://discord.gg/u6DjWuuDcw" target="_blank" rel="noopener noreferrer">
+                  <Link href="https://discord.gg/Knm3aHMmkW" target="_blank" rel="noopener noreferrer">
                     <MessageCircle className="w-4 h-4 mr-2" />
                     Discord
                   </Link>
